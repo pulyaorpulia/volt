@@ -1,0 +1,671 @@
+/* 🚀 Sayt umumiy sozlamalari */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: "Gluten", serif;
+    background-color: #3dc6d037;
+    color: #67b12b;
+}
+
+/* 🚀 Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Navbar balandligi */
+    background: rgba(49, 20, 74, 0.363);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 90px;
+    z-index: 1000;
+}
+
+.nav-logo img {
+    height: 70px; /* Logotip balandligi */
+    width: auto; /* Kenglik avtomatik */
+    transition: transform 0.7s ease-in-out;
+}
+
+/* 🚀 Hover effekti */
+.nav-logo img:hover {
+    transform: scale(1); /* Kattalashadi */
+}
+
+/* 🚀 Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Markazga joylash */
+    align-items: center;
+    gap: 25px;
+    flex-grow: 1; /* Navbar bo‘ylab teng taqsimlanadi */
+}
+
+/* 🚀 Navbar Links - Individual Items */
+.nav-links li {
+    display: inline-block;
+}
+
+/* 🚀 Navbar Links - Styling */
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* Dark navy blue */
+    font-size: 25px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* 🚀 Hover Effect */
+.nav-links a:hover {
+    background-color: #87CEEB; /* Light sky blue */
+    color: rgb(207, 223, 59);
+}
+
+/* 🚀 Background video */
+/* Hero bo'limi uchun asosiy stil */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ekran balandligini to'liq egallash */
+    background: url('images/p.jpg') no-repeat center center/cover; /* Fon rasm */
+    color: white; /* Matn rangi */
+    text-align: center;
+    padding: 0 20px;
+    background-color: #902222; /* Qora rangli fon */
+    color: white; /* Matn rangi */
+}
+
+/* Hero kontenti uchun stil */
+.hero-content {
+    max-width: 600px; /* Kontentning maksimal kengligi */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Sarlavha o'lchami */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem; /* Matn o'lchami */
+    margin-bottom: 30px;
+}
+
+/* Tugma uchun stil */
+.hero-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f61; /* Tugma rangi */
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #e65a50; /* Tugma hover holati */
+}
+
+/* 🚀 Home qismi */
+.home {
+    position: relative;
+    text-align: center;
+    margin-top: 100px; /* Navbar va video bilan to‘qnashmasligi uchun */
+    color: rgba(161, 70, 70, 0.29);
+    width: 100%;
+    height: 100vh; /* Butun ekranni egallaydi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* 🚀 Social links */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* 🚀 Social tugmalar */
+.social-btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🚀 Ikon rasmlari */
+.social-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 🚀 Hover effekti */
+.social-btn:hover {
+    transform: scale(1.2);
+}
+
+/* 🚀 Crypto address copy */
+.copy-address {
+    margin-top: 20px;
+}
+
+.copy-address input {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+.copy-address button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.copy-address button:hover {
+    background-color: #ffaa00;
+}
+
+/* 🚀 About qismi */
+#about {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+}
+
+.about-bg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Orqa fon sifatida */
+
+}
+
+.about-content {
+    position: relative;
+    z-index: 1;
+}
+
+#about h2 {
+    font-size: 56px;
+    margin-bottom: 110px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#about p {
+    font-size: 28px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* 🚀 Our Values bo‘limi */
+.values {
+    padding: 80px 20px;
+    background-color: #f8f9fa00; /* Engil kulrang fon */
+    text-align: center;
+}
+
+.values-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.values h2 {
+    font-size: 32px;
+    color: #9b1bbe;
+    margin-bottom: 20px;
+}
+
+.values-intro {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* 🚀 Qadriyatlar ro‘yxati */
+.values-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 🚀 Har bir qadriyat bloki */
+.value-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🚀 Hover qilganda effekti */
+.value-box:hover {
+    transform: scale(1.05);
+}
+
+/* 🚀 Sarlavhalar */
+.value-box h3 {
+    font-size: 22px;
+    color: #ffcc00; /* Sariq rang */
+    margin-bottom: 10px;
+}
+
+/* 🚀 Matn */
+.value-box p {
+    font-size: 16px;
+    color: #444;
+}
+
+
+.tokenomics {
+    padding: 80px 20px;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+}
+
+.tokenomics-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 🚀 Sarlavha */
+.tokenomics h2 {
+    font-size: 32px;
+    color: #9b1bbe;
+    margin-bottom: 20px;
+}
+
+/* 🚀 Kirish matni */
+.tokenomics-intro {
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 🚀 Tokenomics ro‘yxati */
+.tokenomics-list {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.tokenomics-list li {
+    font-size: 16px;
+    color: #444;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* 🚀 Hover effekti */
+.tokenomics-list li:hover {
+    transform: scale(1.05);
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* 🚀 Matnlar */
+.tokenomics-list li strong {
+    color: #ff6600;
+}
+
+/* 🚀 Tokenomics bo‘limi tugash qismi */
+.tokenomics-footer {
+    font-size: 16px;
+    color: #333;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+
+.how-to-buy {
+    padding: 80px 20px;
+    background-color: #f8f9fa00;
+    text-align: center;
+}
+
+.how-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 🚀 Sarlavha */
+.how-to-buy h2 {
+    font-size: 32px;
+    color: #9b1bbe;
+    margin-bottom: 20px;
+}
+
+/* 🚀 Qadamlar ro‘yxati */
+.how-list {
+    text-align: left;
+    list-style: decimal;
+    padding-left: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.how-list li {
+    font-size: 16px;
+    color: #444;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* 🚀 Hover effekti */
+.how-list li:hover {
+    transform: scale(1.05);
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* 🚀 Sarlavhalar */
+.how-list h3 {
+    font-size: 18px;
+    color: #ff6600;
+    margin-bottom: 5px;
+}
+
+/* 🚀 Matn */
+.how-list p {
+    font-size: 16px;
+    color: #555;
+}
+
+.footer {
+    background-color: #1e1e2f00;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* 🚀 Footer Content */
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 🚀 Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #b7550e;
+}
+
+
+
+h1 {
+    font-size: 80px; /* Katta shrift */
+    font-weight: 700; /* Qalin harflar */
+    color: #279e0f; /* Moviy (Navy Blue) rang */
+    text-align: center; /* Markazga joylash */
+    text-transform: uppercase; /* Harflarni katta qilish */
+    letter-spacing: 2px; /* Harflar orasidagi masofa */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Soyali matn */
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+h1:hover {
+    transform: scale(1.05); /* Biroz kattalashadi */
+    color: #ffcc00; /* Sariq rangga o‘zgaradi */
+}
+
+p {
+    font-size: 30px; /* Matn kattaligi */
+    font-weight: 400; /* O‘rtacha qalinlik */
+    color: #333; /* To‘q kulrang matn */
+    line-height: 1.6; /* Satrlari orasidagi masofa */
+    text-align: center; /* Markazga joylash */
+    max-width: 800px; /* Juda keng bo‘lib ketmasligi uchun */
+    margin: 10px auto; /* Matnni markazda ushlab turish */
+    padding: 0px;
+}
+
+/* 🚀 Highlight Effect (Ba'zi so‘zlarni ajratish uchun) */
+p strong {
+    color: #00416A; /* Moviy rang */
+    font-weight: 600;
+}
+
+/* 🚀 Italic Text */
+p em {
+    color: #ff6600; /* To‘q sariq */
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+/* 🚀 Mobil versiya */
+@media (max-width: 768px) {
+    /* 🚀 Navbar */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 🚀 Navbar linklar */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 🚀 Navbar linklar yonma-yon bo‘lishi uchun */
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Katta yozuvlar sig‘masa, keyingi qatorga tushadi */
+        justify-content: center;
+        gap: 15px; /* Linklar orasidagi masofa */
+        padding: 10px;
+    }
+
+    /* 🚀 Mobil logotip */
+    .nav-logo img {
+        height: 50px;
+    }
+
+    /* 🚀 Mobil menyu yozuvlari */
+    .nav-links a {
+        font-size: 14px; /* Matn aniq ko‘rinishi uchun */
+        padding: 8px 12px; /* Tugma kattaligi */
+        border-radius: 5px; /* Tugma burchaklari yumshoq */
+        background-color: rgba(255, 255, 255, 0.1); /* Shaffof fon */
+        transition: background 0.3s ease-in-out;
+    }
+
+    /* 🚀 Hover effekti */
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    h1 {
+        font-size: 36px; /* Telefon ekranda kichikroq bo‘lishi uchun */
+        letter-spacing: 1px;
+        padding: 15px;
+    }
+
+    p {
+        font-size: 16px; /* Telefon ekranda kichikroq bo‘lishi uchun */
+        line-height: 1.5;
+        padding: 5px;
+    }
+
+    /* 🚀 Home qismi */
+    .home {
+        height: auto;
+        margin-top: 80px;
+        font-size: 18px;
+        padding: 80px 15px;
+    }
+
+    .home-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ekranni to‘liq qoplashi uchun */
+        z-index: -1; /* Kontent rasm ustida chiqishi uchun */
+    }
+
+    /* 🚀 Overlay (yarim shaffof qora fon) */
+    .home::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.13); /* 50% shaffof qora fon */
+        z-index: 0;
+    }
+
+    .home-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* 🚀 Social links */
+    .social-links {
+        background: rgba(38, 212, 116, 0.215); /* 50% shaffof qora fon */
+        flex-direction: inline;
+        gap: 50px;
+    }
+
+    /* 🚀 Social tugmalar */
+    .social-btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* 🚀 Copy address */
+    .copy-address input {
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .copy-address button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .values-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .value-box {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .tokenomics-list li {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .tokenomics h2 {
+        font-size: 28px;
+    }
+
+    .tokenomics-intro {
+        font-size: 16px;
+    }
+
+    .how-list li {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .how-to-buy h2 {
+        font-size: 28px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    .hero {
+        background-size: contain;  /* Mobil ekranlarga moslash */
+        background-position: center;
+        background-repeat: repeat;
+        height: 38vh;
+        background-attachment: scroll;
+    }
+    
+}
